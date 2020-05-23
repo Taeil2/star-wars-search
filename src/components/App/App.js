@@ -28,6 +28,11 @@ export default class App extends React.Component {
           return res.json();
         } else {
           // response failed
+          let errors = this.state.errors;
+          errors.push(`Error ${res.status}: ${res.statusText}`);
+          this.setState({
+            errors: errors
+          });
         }
       })
       .then(data => {
@@ -43,6 +48,11 @@ export default class App extends React.Component {
       })
       .catch(e => {
         // fetch failed
+        let errors = this.state.errors;
+        errors.push(`Error: ${e}`);
+        this.setState({
+          errors: errors
+        });
       })
   }
 
@@ -55,7 +65,6 @@ export default class App extends React.Component {
           if (res.ok) {
             data.push(res.json());
           } else {
-            // data.push({}); // empty object for an empty result
             let errors = this.state.errors;
             errors.push(`Error ${res.status}: ${res.statusText}`);
             this.setState({
@@ -79,10 +88,20 @@ export default class App extends React.Component {
           })
           .catch(e => {
             // all settled failed
+            let errors = this.state.errors;
+            errors.push(`Error: ${e}`);
+            this.setState({
+              errors: errors
+            });
           });
       })
       .catch(e => {
         // all homeworlds fetch failed
+        let errors = this.state.errors;
+        errors.push(`Error: ${e}`);
+        this.setState({
+          errors: errors
+        });
       });
 
     console.log(data);
