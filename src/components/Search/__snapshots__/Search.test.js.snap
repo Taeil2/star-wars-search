@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the UI as expected 1`] = `
+<form
+  id="searchForm"
+  onSubmit={[Function]}
+>
+  <label
+    htmlFor="character"
+  >
+    Search for a character
+  </label>
+  <input
+    id="character"
+    onChange={[Function]}
+    placeholder="skywalker"
+    type="text"
+    value=""
+  />
+  <div
+    id="error"
+  >
+    
+  </div>
+</form>
+`;

@@ -1,0 +1,120 @@
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/*------------------
+  Global
+------------------*/
+// @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  background-image: url('./img/star-wars-bg.jpg');
+  color: #fff;
+}
+@font-face {
+  font-family: 'Star Jedi';
+  src: url('./other/StarJedi-DGRW.ttf');
+}
+main {
+  padding: 0 20px;
+}
+
+/*------------------
+  Elements
+------------------*/
+a {
+  text-decoration: none;
+  color: black;
+}
+button {
+  display: inline-block;
+  -webkit-appearance: none;
+    -moz-appearance: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/*------------------
+  Typography
+------------------*/
+h1 {
+  font-family: 'Star Jedi', Roboto, sans-serif;
+}
+
+/*------------------
+  Header
+------------------*/
+header {
+  text-align: center;
+  margin-top: 100px;
+}
+form {
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+form label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+form input {
+  display: block;
+  font-size: 20px;
+  padding: 5px 10px;
+  width: 100%;
+}
+form .error {
+  color: #f51c1c;
+  font-weight: bold;
+}
+
+/*------------------
+  Results
+------------------*/
+.results {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.results span {
+  width: 100%;
+}
+.result {
+  flex: 1 0 100%;
+  padding: 0 20px;
+}
+@media (min-width: 500px) {
+  .result {
+    flex: 1 0 40%;
+  }
+}
+@media (min-width: 800px) {
+  .result {
+    flex: 1 0 30%;
+  }
+}
